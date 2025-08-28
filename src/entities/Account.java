@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.List;
+
 public class Account {
     private String accountOwner;
     private int accountNumber;
@@ -33,21 +35,44 @@ public class Account {
         return balance;
     }
 
-    public boolean deposit(double amount){
-        if(amount <= 0){
-            return false;
-        } else {
-            balance += amount;
-            return true;
+    // Calcula saldo total do banco
+    public static double totalBalance(List<Account> list) {
+        double sum = 0;
+        for (int i = 0; i < list.size(); i++) {
+            sum += list.get(i).getBalance();
         }
+        return sum;
     }
 
-    public boolean withdraw(double amount){
-        if(amount < balance){
-            return false;
-        } else {
-            balance -= amount;
-            return true;
+    // Calcula a média dos saldos
+    public static double averageBalance(List<Account> list) {
+        double sum = 0;
+        for (int i = 0; i < list.size(); i++) {
+            sum += list.get(i).getBalance();
         }
+        sum = sum / list.size();
+        return sum;
+    }
+
+    // Retorna conta com maior saldo
+    public static double biggerAccount(List <Account> list){
+        double aux = 0;
+        for (int i = 0; i < list.size(); i++){
+            if(aux < list.get(i).getBalance()){
+                aux = list.get(i).getBalance();
+            }
+        }
+        return aux;
+    }
+
+    // Retorna conta com menor saldo
+    public static double smallerAccount(List <Account> list){
+        double aux = 1000000;
+        for (int i = 0; i < list.size(); i++){
+            if(aux > list.get(i).getBalance()){
+                aux = list.get(i).getBalance();
+            }
+        }
+        return aux;
     }
 }
