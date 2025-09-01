@@ -19,12 +19,12 @@ public class Account {
     /*
      * Construtor para inicializar uma conta bancaria.
      */
-    public Account(String accountOwner, int accountNumber, double balance, Type accountType) {
+    public Account(String accountOwner, int accountNumber, double balance, Type accountType, LocalDate createDate) {
         this.accountOwner = accountOwner;
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.accountType = accountType;
-        this.createDate = LocalDate.now();
+        this.createDate = createDate;
     }
 
     public LocalDate getCreateDate() {

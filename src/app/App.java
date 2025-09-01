@@ -3,6 +3,7 @@ package app;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -87,13 +88,14 @@ public class App {
       while ((line = br.readLine()) != null) {
         String[] parts = line.split(";");
 
-        if (parts.length == 4) {
+        if (parts.length == 5) {
           String accountOwner = parts[0];
           int accountNumber = Integer.parseInt(parts[1]);
           double balance = Double.parseDouble(parts[2]);
           Type accountType = Type.valueOf(parts[3]);
+          LocalDate createDate = LocalDate.parse(parts[4]);
 
-          Account account = new Account(accountOwner, accountNumber, balance, accountType);
+          Account account = new Account(accountOwner, accountNumber, balance, accountType, createDate);
           accounts.add(account);
         }
       }
@@ -124,7 +126,7 @@ public class App {
       }
     }
 
-    Account newAccount = new Account(name, accountNumber, balance, accountType);
+    Account newAccount = new Account(name, accountNumber, balance, accountType, LocalDate.now());
     accounts.add(newAccount);
     System.out.println("[INFO] Usuário " + name + " adicionado com sucesso! Conta: " + accountNumber);
   }
@@ -138,7 +140,8 @@ public class App {
       System.out.println("Titular: " + account.getAccountOwner() +
           " | Conta: " + account.getAccountNumber() +
           " | Saldo: R$ " + String.format("%.2f", account.getBalance()) +
-          " | Tipo: " + account.getAccountType());
+          " | Tipo: " + account.getAccountType() +
+          " | Data de criação: " + account.getCreateDate());
     }
   }
 
