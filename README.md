@@ -1,4 +1,4 @@
-# Sistema Bancário - Trabalho Acadêmico
+# Sistema Bancário - Trabalho Acadêmico POO 25/2
 
 ## 📋 Descrição do Projeto
 
@@ -16,29 +16,31 @@ Este projeto implementa um sistema bancário em Java que gerencia contas bancár
 - Número da conta
 - Saldo atual
 - Tipo de conta (Corrente, Poupança, Salário, Jurídica)
+- Data de criação da conta
 
 ## 📁 Estrutura do Projeto
 
 ```
 src/
-├── App.java              # Classe principal da aplicação
+├── app/
+│   └── App.java          # Classe principal da aplicação
+├── entities/
+│   ├── Account.java      # Classe que representa uma conta bancária
+│   └── Type.java         # Enum com tipos de conta
 ├── dados.txt             # Arquivo com 10 contas bancárias
-├── dados2.txt            # Segundo arquivo com 10 contas diferentes
-└── entities/
-    ├── Account.java      # Classe que representa uma conta bancária
-    └── Type.java         # Enum com tipos de conta
+└── dados2.txt            # Segundo arquivo com 10 contas diferentes
 ```
 
 ## 🚀 Como Executar
 
 ### Compilação
 ```bash
-javac -cp src src/App.java src/entities/*.java
+javac -cp src src/app/App.java src/entities/*.java
 ```
 
 ### Execução
 ```bash
-java -cp src App
+java -cp src app.App
 ```
 
 ## 🎮 Interface de Seleção
@@ -85,7 +87,7 @@ O sistema extrai os seguintes dados significativos:
 
 Os arquivos devem seguir o formato:
 ```
-nome;numeroConta;saldo;tipoConta
+nome;numeroConta;saldo;tipoConta;dataCriacao
 ```
 
 ### Tipos de Conta Disponíveis:
@@ -96,9 +98,9 @@ nome;numeroConta;saldo;tipoConta
 
 ### Exemplo de Dados:
 ```
-Henrique Rosa Nunes;19102604;15000.50;CORRENTE
-Maria Silva Santos;45678912;8500.75;POUPANCA
-João Pedro Oliveira;23456789;3200.25;SALARIO
+Henrique Rosa Nunes;19102604;15000.50;CORRENTE;2024-01-15
+Maria Silva Santos;45678912;8500.75;POUPANCA;2025-02-20
+João Pedro Oliveira;23456789;3200.25;SALARIO;2024-03-10
 ```
 
 ## 🔧 Tecnologias Utilizadas
@@ -107,6 +109,7 @@ João Pedro Oliveira;23456789;3200.25;SALARIO
 - **Estruturas de Dados**: ArrayList
 - **Entrada/Saída**: BufferedReader, FileReader, Scanner
 - **Tratamento de Exceções**: IOException, NumberFormatException
+- **Manipulação de Datas**: LocalDate
 
 ## 🛡️ Validações Implementadas
 
