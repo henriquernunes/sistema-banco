@@ -1,0 +1,10 @@
+Xavier Montenegro Filho;55555555;250000;JURIDICA
+Zuleica Aparecida dos Santos;11111111;150;POUPANCA
+Thor Odinson Silva;99999999;75000;CORRENTE
+Cleopatra Maria das Dores;22222222;8900;SALARIO
+Bruce Wayne Oliveira;77777777;1500000;JURIDICA
+Hermione Granger Costa;33333333;4200;SALARIO
+Gandalf o Cinzento;88888888;125000;JURIDICA
+Dona Florinda Pereira;44444444;1800;POUPANCA
+Tony Stark Mendes;66666666;2500000;JURIDICA
+Princesa Leia Santos;12121212;3500;SALARIO
