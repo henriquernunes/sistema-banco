@@ -99,7 +99,7 @@ public class App {
           accounts.add(account);
         }
       }
-      System.out.println("[INFO] Arquivo '" + fileName + "' carregado com sucesso! " + accounts.size() + " contas encontradas.");
+      System.out.println("\n[INFO] Arquivo '" + fileName + "' carregado com sucesso! " + accounts.size() + " contas encontradas.");
     } catch (IOException e) {
       System.out.println("[ERROR] Erro ao ler o arquivo '" + fileName + "': " + e.getMessage());
     }
