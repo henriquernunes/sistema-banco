@@ -1,5 +1,6 @@
 package entities;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -13,6 +14,7 @@ public class Account {
     private int accountNumber;
     private double balance;
     private Type accountType;
+    private LocalDate createDate;
 
     /*
      * Construtor para inicializar uma conta bancaria.
@@ -22,6 +24,11 @@ public class Account {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.accountType = accountType;
+        this.createDate = LocalDate.now();
+    }
+
+    public LocalDate getCreateDate() {
+        return createDate;
     }
 
     public int getAccountNumber() {
