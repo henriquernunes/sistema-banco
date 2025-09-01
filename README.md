@@ -6,7 +6,8 @@ Este projeto implementa um sistema bancário em Java que gerencia contas bancár
 
 ## 👥 Integrantes do Grupo
 
-- [Nome dos integrantes do grupo]
+- Henrique Rosa Nunes
+- João Victor Gueths Scarinci
 
 ## 🏦 Tipo de Dados Escolhido
 
